@@ -13,7 +13,7 @@ app.use(passport.session())
 const port = 5000
 
 function isLoggedIn(req, res, next){
-    req.user ? next() : res.sendStatus(401)
+    req.user ? next() : res.sendFile(path.join(__dirname, '/public/unauthorized.html'))
 }
 // '<a href="/auth/google"> Authenticate with Google</a>'
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/public/index2.html')))
@@ -30,14 +30,14 @@ app.get('/google/callback',
     })
 )
 
-app.get('/auth/failure', (req, res) => res.send('Non sei autorizzato'))
+app.get('/auth/failure', (req, res) => res.sendFile(path.join(__dirname, '/public/unauthorized.html')))
 //res.send(`Hello ${req.user.displayName}`)
 app.get('/protected', isLoggedIn, (req, res) => res.sendFile(path.join(__dirname, '/public/successLogin.html')))
 
 app.get('/logout', (req, res) => {
     
     req.session.destroy()
-    res.send('Goodbye!')
+    res.sendFile(path.join(__dirname, '/public/goodbye.html'))
 })
 
 

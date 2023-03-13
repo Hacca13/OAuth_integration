@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accesso non autorizzato</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: 'Roboto', sans-serif;
+			font-size: 18px;
+			color: #333;
+			text-align: center;
+		}
+		h1 {
+			font-size: 50px;
+			margin-top: 200px;
+			animation-name: pulse;
+			animation-duration: 2s;
+			animation-fill-mode: both;
+			background-image: linear-gradient(to right, #ff6f69, #ffcc5c);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		p {
+			margin-top: 50px;
+			font-size: 24px;
+			font-weight: bold;
+			animation-name: fadeIn;
+			animation-duration: 1s;
+			animation-fill-mode: both;
+		}
+		@keyframes pulse {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(1.1);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>Accesso non autorizzato</h1>
+	<p>Siamo spiacenti, non sei autorizzato ad accedere a questa pagina.</p>
+</body>
+</html>
