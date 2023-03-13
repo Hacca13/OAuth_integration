@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Google - Collegati</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+      }
+      .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        animation: scale-up 0.5s ease-out;
+      }
+      .button {
+        background-color: #4285f4;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 24px;
+        padding: 10px 20px;
+        cursor: pointer;
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+        transition: all 0.2s ease-in-out;
+      }
+      .button:hover {
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      }
+      h1 {
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 50px;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+        animation: scale-up 0.5s ease-out;
+        font-family: 'Product Sans', Arial, sans-serif;
+        color: #4285f4;
+      }
+      @keyframes scale-up {
+        0% {
+          transform: scale(0);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h1>Collegati a <span style="color: #ea4335;">G</span><span style="color: #fbbc05;">o</span><span style="color: #4285f4;">o</span><span style="color: #ea4335;">g</span><span style="color: #34a853;">l</span><span style="color: #ea4335;">e</span></h1>
+      <form action="/auth/google">
+        <button type="submit" class="button">Accedi con Google</button>
+      </form>
+    </div>
+  </body>
+</html>
